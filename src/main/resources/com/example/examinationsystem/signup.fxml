@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="login_parent" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.Signup">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/dhor.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="20.0" layoutY="129.0" text="Create an account" textFill="#957591">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="158.0" text="Fill the form" textFill="#a3a3a3">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="375.0" layoutY="3.0" onMouseClicked="#close_app" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/exit.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TextField layoutX="61.0" layoutY="234.0" prefHeight="40.0" prefWidth="250.0" promptText="Enter Username" styleClass="input_email" stylesheets="@Style.css" />
+      <TextField layoutX="61.0" layoutY="287.0" prefHeight="40.0" prefWidth="250.0" promptText="Email" styleClass="input_email" stylesheets="@Style.css" />
+      <PasswordField layoutX="61.0" layoutY="339.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="input_password" />
+      <PasswordField layoutX="61.0" layoutY="394.0" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" styleClass="input_password" />
+      <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="461.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" ripplerFill="#e5f812" styleClass="loginBtn" text="Signup">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="22.0" fitWidth="22.0" onMouseClicked="#back_to_login" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/arrow.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -2,17 +2,23 @@ package com.example.examinationsystem;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    public static  Stage stage=null;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("side-bar.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
-        stage.setTitle("Hello!");
+        Parent fxmlLoader = FXMLLoader.load(getClass().getResource("student.fxml"));
+        Scene scene = new Scene(fxmlLoader);
+        stage.initStyle(StageStyle.UNDECORATED);
+//        stage.setTitle("Dashboard");
+        this.stage=stage;
+
         stage.setScene(scene);
         stage.show();
     }

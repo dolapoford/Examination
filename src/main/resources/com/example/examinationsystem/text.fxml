@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.HelloController">
+   <children>
+      <BorderPane layoutX="168.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="108.0" prefWidth="702.0" style="-fx-background-color: White;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="66.0" layoutY="20.0" prefHeight="50.0" prefWidth="702.0" style="-fx-background-color: #032d4d;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="653.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></Pane>
+                  <HBox alignment="CENTER" layoutX="100.0" layoutY="49.0" prefHeight="59.0" prefWidth="525.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
+                     <children>
+                        <JFXButton prefHeight="38.0" prefWidth="136.0" text="Dashboard">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/dash1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton prefHeight="38.0" prefWidth="136.0" text="ADD">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/add1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton prefHeight="38.0" prefWidth="136.0" text="Report">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/report1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton prefHeight="38.0" prefWidth="136.0" text="Backup">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/data1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <Label fx:id="menubar" layoutX="37.0" layoutY="37.0" />
+                  <FontIcon iconLiteral="fa-navicon" iconSize="22" layoutX="46.0" layoutY="85.0" />
+                  <Label fx:id="menuback" layoutX="14.0" layoutY="39.0" />
+                  <FontIcon iconLiteral="fa-times" iconSize="22" layoutX="14.0" layoutY="85.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane fx:id="slider" prefHeight="427.0" prefWidth="220.0" style="-fx-background-color: #0A4969;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="44.0" layoutY="105.0" prefHeight="297.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="220.0" text="Student" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-id-badge" iconSize="22" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="220.0" text="Teacher" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-vcard-o" iconSize="22" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="220.0" text="Fees" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="anto-money-collect" iconSize="22" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="220.0" text="Examination" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="anto-container" iconSize="22" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="220.0" text="Setting" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-gear" iconSize="20" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="220.0" text="User" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-user" iconSize="22" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="127.0" fitWidth="138.0" layoutX="40.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Dhorlar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="root" stylesheets="@Style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="378.0" stylesheets="@../../../../../../../../../Documents/Fruits-Market-master/FruitMarket/out/production/FruitMarket/values/style.css">
+                     <children>
+                        <TextField prefHeight="40.0" prefWidth="235.0" promptText="Type here to search" styleClass="transparent" stylesheets="@../../../../../../../../../Documents/Fruits-Market-master/FruitMarket/out/production/FruitMarket/values/style.css">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" styleClass="search-button" stylesheets="@../../../../../../../../../Documents/Fruits-Market-master/FruitMarket/out/production/FruitMarket/values/style.css" text="Search" textFill="WHITE" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <Pane layoutX="104.0" layoutY="91.0" prefHeight="32.0" prefWidth="257.0" styleClass="pane_two" stylesheets="@Style.css">
+                     <children>
+                        <TextField layoutY="5.0" />
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

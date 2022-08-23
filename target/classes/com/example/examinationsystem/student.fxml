@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1134.0" styleClass="parent" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.HelloController">
+   <left>
+      <AnchorPane prefHeight="600.0" prefWidth="161.0" styleClass="sidebar" stylesheets="@Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="1.0" layoutY="105.0" prefHeight="334.0" prefWidth="174.0">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#open_dashboard" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Dashboard">
+                     <graphic>
+                        <FontIcon fill="#e3b409" iconLiteral="bx-category" iconSize="18" styleClass="btn_icons" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#open_student" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Student">
+                     <graphic>
+                        <FontIcon fill="#e3b409" iconLiteral="bx-user" iconSize="18" styleClass="btn_icons" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Database">
+                     <graphic>
+                        <FontIcon fill="#e3b409" iconLiteral="bx-data" iconSize="18" styleClass="btn_icons" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" prefHeight="25.0" prefWidth="176.0" styleClass="btn_hover" text="Examination">
+                     <graphic>
+                        <FontIcon fill="#e3b409" iconLiteral="bx-layer-plus" iconSize="18" styleClass="btn_icons" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Payment">
+                     <graphic>
+                        <FontIcon fill="#e3b409" iconLiteral="bx-wallet-alt" iconSize="18" styleClass="btn_icons" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Setting">
+                     <graphic>
+                        <FontIcon fill="#e3b409" iconLiteral="fa-gear" iconSize="18" styleClass="btn_icons" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" prefHeight="25.0" prefWidth="176.0" styleClass="btn_hover" text="Profile">
+                     <graphic>
+                        <FontIcon fill="#e3b409" iconLiteral="bx-user" iconSize="18" styleClass="btn_icons" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <ImageView fitHeight="59.0" fitWidth="128.0" layoutX="37.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/dhor.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="4.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontIcon iconLiteral="bx-menu" iconSize="20" />
+               </graphic>
+            </Button>
+            <VBox layoutX="-2.0" layoutY="487.0" prefHeight="113.0" prefWidth="175.0">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="176.0" styleClass="btn_icon2" text="Help &amp; Support" textFill="#c1c1c1">
+                     <graphic>
+                        <FontIcon fill="#c1c1c1" iconLiteral="bx-support" iconSize="18" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="176.0" styleClass="btn_icon2" text="Log Out" textFill="#c1c1c1">
+                     <graphic>
+                        <FontIcon fill="#0a0a0a" iconLiteral="bx-log-out" iconSize="18" />
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="main_pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="897.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="53.0" prefHeight="206.0" prefWidth="899.0" style="-fx-background-color: white;" styleClass="pane" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="897.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="74.0" text="Dashboard" textFill="#2b49b3">
+                           <font>
+                              <Font name="Calibri Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <Label prefHeight="29.0" prefWidth="189.0" text="Hello Dolapo, welcome back" textFill="#4c4c4e">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="407.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField alignment="BOTTOM_RIGHT" layoutY="2.0" prefHeight="25.0" prefWidth="270.0" promptText="Search here" styleClass="input" />
+                              <AnchorPane layoutX="8.0" layoutY="2.0" prefHeight="25.0" prefWidth="25.0">
+                                 <children>
+                                    <Label layoutX="-1.0" layoutY="4.0" AnchorPane.topAnchor="2.0">
+                                       <graphic>
+                                          <FontIcon iconLiteral="fa-search" iconSize="20" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="107.0" prefWidth="897.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox prefHeight="167.0" prefWidth="225.0">
+                           <children>
+                              <HBox />
+                              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="230.0" styleClass="colored_card" stylesheets="@Style.css">
+                                 <children>
+                                    <AnchorPane layoutX="25.0" layoutY="10.0" prefHeight="55.0" prefWidth="60.0" styleClass="colored_card2">
+                                       <children>
+                                          <FontIcon fill="WHITE" iconLiteral="fa-user" iconSize="20" layoutX="23.0" layoutY="34.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="140.0" layoutY="14.0" text="Student" textFill="#868686">
+                                       <font>
+                                          <Font name="Symbol" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="140.0" layoutY="38.0" text="302" textFill="#868686">
+                                       <font>
+                                          <Font name="Georgia Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="167.0" prefWidth="225.0">
+                           <children>
+                              <HBox />
+                              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="230.0" styleClass="colored_card" stylesheets="@Style.css">
+                                 <children>
+                                    <AnchorPane layoutX="24.0" layoutY="10.0" prefHeight="55.0" prefWidth="60.0" styleClass="colored_card3">
+                                       <children>
+                                          <FontIcon fill="WHITE" iconLiteral="fa-vcard-o" iconSize="20" layoutX="19.0" layoutY="34.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="120.0" layoutY="14.0" text="Teacher" textFill="#868686">
+                                       <font>
+                                          <Font name="Symbol" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="120.0" layoutY="38.0" text="22" textFill="#868686">
+                                       <font>
+                                          <Font name="Georgia Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="167.0" prefWidth="225.0">
+                           <children>
+                              <HBox />
+                              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="230.0" styleClass="colored_card" stylesheets="@Style.css">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="55.0" prefWidth="60.0" styleClass="colored_card4">
+                                       <children>
+                                          <FontIcon fill="WHITE" iconLiteral="fa-vcard-o" iconSize="20" layoutX="19.0" layoutY="34.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="121.0" layoutY="14.0" text="Staff" textFill="#868686">
+                                       <font>
+                                          <Font name="Symbol" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="123.0" layoutY="38.0" text="40" textFill="#868686">
+                                       <font>
+                                          <Font name="Georgia Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="600.0" prefWidth="139.0" BorderPane.alignment="CENTER">
+         <children>
+            <Circle fill="WHITE" layoutX="20.0" layoutY="69.0" radius="20.0" stroke="#c1c1c1" strokeType="INSIDE" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
+               <image>
+                  <Image url="@Images/profile.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="46.0" layoutY="54.0" text="Dolapo Ahm...">
+               <font>
+                  <Font name="Georgia Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="75.0" text="\@dhor">
+               <font>
+                  <Font name="Georgia Italic" size="11.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="110.0" layoutY="3.0" onMouseClicked="#close_button" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/exit.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

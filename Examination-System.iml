@@ -10,12 +10,18 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="javafx.media" level="project" />
+    <orderEntry type="library" name="jfoenix-9.0.10" level="project" />
+    <orderEntry type="library" name="fontawesomefx-8.9" level="project" />
+    <orderEntry type="library" name="fontawesomefx-8.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:11.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-media:11.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-media:win:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:win:11.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.1" level="project" />
@@ -27,6 +33,8 @@
     <orderEntry type="library" name="Maven: org.kordamp.ikonli:ikonli-javafx:12.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.kordamp.ikonli:ikonli-typicons-pack:12.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.kordamp.ikonli:ikonli-fontawesome-pack:12.3.1" level="project" />
+    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx:8.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.kordamp.ikonli:ikonli-boxicons-pack:12.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.kordamp.ikonli:ikonli-antdesignicons-pack:12.3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
