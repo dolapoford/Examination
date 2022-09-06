@@ -57,5 +57,25 @@ System.exit(0);
 
 
     }
+    @FXML
+    void open_data(ActionEvent event) throws IOException {
+        Parent fxml = FXMLLoader.load(getClass().getResource("Subject.fxml"));
+        main_pane.getChildren().removeAll();
+        main_pane.getChildren().setAll(fxml);
+    }
+
+    @FXML
+    void examBtn(ActionEvent event) throws IOException {
+        Parent fxml =FXMLLoader.load(getClass().getResource("upcomingExam.fxml"));
+        main_pane.getChildren().removeAll();
+        main_pane.getChildren().setAll(fxml);
+    }
+
+    @FXML
+    void open_question(ActionEvent event) throws IOException {
+        Parent fxml =FXMLLoader.load(getClass().getResource("examination.fxml"));
+        main_pane.getChildren().removeAll();
+        main_pane.getChildren().setAll(fxml);
+    }
 
 }

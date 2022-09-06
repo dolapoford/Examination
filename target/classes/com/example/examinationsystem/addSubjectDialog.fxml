@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane fx:id="addStudentDialog" expanded="true" prefHeight="376.0" prefWidth="640.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.Subject">
+    <content>
+        <AnchorPane prefHeight="310.0" prefWidth="640.0">
+            <children>
+                <GridPane layoutY="50.0" prefHeight="246.0" prefWidth="620.0" AnchorPane.topAnchor="30.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="129.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="552.0" minWidth="10.0" prefWidth="491.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label alignment="BASELINE_LEFT" prefHeight="18.0" prefWidth="130.0" text="Course Name" textFill="#a3a3a3" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Ebrima Bold" size="14.0" />
+                            </font>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="18.0" prefWidth="129.0" text="Qns Per Exam" textFill="#a3a3a3" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="Ebrima Bold" size="14.0" />
+                            </font>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="18.0" prefWidth="127.0" text="Account Status" textFill="#a3a3a3" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="Ebrima Bold" size="14.0" />
+                            </font>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="18.0" prefWidth="129.0" text="Course Code" textFill="#a3a3a3" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Ebrima Bold" size="14.0" />
+                            </font>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ComboBox prefHeight="40.0" prefWidth="250.0" styleClass="combo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="129.0" text="#" textFill="#a3a3a3">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" />
+                    </children>
+                </GridPane>
+            </children>
+        </AnchorPane>
+    </content>
+    <buttonTypes>
+        <ButtonType fx:constant="OK" />
+        <ButtonType fx:constant="CLOSE" />
+    </buttonTypes>
+</DialogPane>

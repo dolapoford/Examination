@@ -1,9 +1,11 @@
 package com.example.examinationsystem;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -15,6 +17,8 @@ public class Signup implements Initializable {
 
     @FXML
     private AnchorPane pane;
+    @FXML
+    private ComboBox<String> comboBox;
 
     @FXML
     void back_to_login(MouseEvent event) throws IOException {
@@ -31,6 +35,6 @@ public class Signup implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        comboBox.setItems(FXCollections.observableArrayList("Java","Html","Css","Javascript","Python","Php"));
     }
 }

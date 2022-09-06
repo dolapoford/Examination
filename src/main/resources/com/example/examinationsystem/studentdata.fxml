@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.StudentData">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.Student">
    <children>
       <VBox prefHeight="48.0" prefWidth="740.0" styleClass="pane_three" stylesheets="@Style.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="20.0">
          <children>
-            <HBox prefHeight="38.0" prefWidth="738.0">
+            <HBox prefHeight="68.0" prefWidth="738.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="74.0" text="STUDENT" textFill="#957591">
                      <font>
@@ -57,6 +61,34 @@
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
+         <top>
+            <AnchorPane prefHeight="61.0" prefWidth="760.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="11.0" onAction="#addStudent" prefHeight="30.0" prefWidth="120.0" styleClass="btn_add" text="Add Student" textFill="WHITE">
+                     <graphic>
+                        <FontIcon fill="WHITE" iconLiteral="bx-plus" iconSize="22" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="503.0" layoutY="16.0" text="Search :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="558.0" layoutY="15.0" prefHeight="27.0" prefWidth="174.0" styleClass="input_email" />
+                  <JFXButton buttonType="RAISED" layoutX="150.0" layoutY="11.0" prefHeight="30.0" prefWidth="120.0" styleClass="btn_add" text="Save" textFill="WHITE">
+                     <graphic>
+                        <FontIcon fill="WHITE" iconLiteral="bx-save" iconSize="22" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </top>
       </BorderPane>
    </children>
 </AnchorPane>

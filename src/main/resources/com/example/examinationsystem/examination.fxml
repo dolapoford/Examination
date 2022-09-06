@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.Examination">
+    <children>
+        <VBox prefHeight="48.0" prefWidth="740.0" styleClass="pane_three" stylesheets="@Style.css" AnchorPane.leftAnchor="40.0">
+            <children>
+                <HBox prefHeight="38.0" prefWidth="738.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="91.0" text="EXAMINATION" textFill="#957591">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Separator orientation="VERTICAL" />
+                        <Label prefHeight="20.0" prefWidth="82.0" text="Dashboard  " textFill="#e3b409">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="189.0" text="/ Examination" textFill="#4c4c4e">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+        <BorderPane layoutY="52.0" prefHeight="549.0" prefWidth="800.0">
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TableView prefHeight="547.0" prefWidth="800.0" styleClass="table_view">
+                            <columns>
+                                <TableColumn prefWidth="51.0">
+                                    <graphic>
+                                        <JFXCheckBox prefHeight="18.0" prefWidth="14.0" text="." textFill="#e3b409" unCheckedColor="WHITE" />
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn prefWidth="70.0" text="Question id" />
+                                <TableColumn minWidth="0.0" prefWidth="60.0" text="Exam Id" />
+                                <TableColumn minWidth="0.0" prefWidth="79.0" text="Question No" />
+                                <TableColumn prefWidth="116.0" text="Question" />
+                                <TableColumn minWidth="0.0" prefWidth="71.0" text="Option A" />
+                                <TableColumn minWidth="0.0" prefWidth="71.0" text="Option B" />
+                                <TableColumn minWidth="0.0" prefWidth="71.0" text="Option C" />
+                                <TableColumn minWidth="0.0" prefWidth="71.0" text="Option D" />
+                                <TableColumn minWidth="0.0" prefWidth="76.0" text="Correct Answer" />
+                                <TableColumn minWidth="0.0" prefWidth="71.0" text="Mark" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </center>
+            <top>
+                <AnchorPane prefHeight="69.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField layoutX="14.0" layoutY="21.0" prefHeight="27.0" prefWidth="174.0" styleClass="input_email" />
+                        <JFXButton buttonType="RAISED" layoutX="197.0" layoutY="20.0" prefHeight="30.0" prefWidth="76.0" styleClass="btn_add" text="Search" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="648.0" layoutY="20.0" onAction="#addExam" prefHeight="30.0" prefWidth="120.0" styleClass="btn_add" text="Add Exam" textFill="WHITE">
+                            <graphic>
+                                <FontIcon fill="WHITE" iconLiteral="bx-plus" iconSize="22" />
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                    </children>
+                </AnchorPane>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

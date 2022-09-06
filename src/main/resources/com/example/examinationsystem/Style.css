@@ -136,25 +136,19 @@
  -fx-border-radius: 5px;
 }
 
-/* .table_view{
-    -fx-background-color:white;
-    -fx-background-radius:30px;
-}
- .table_view .column_header_background{
-    -fx-background-color:#e3b409;
-    -fx-background-radius:30px;
-    -fx-background-Insets:0 0 10 0 ;
-    -fx-padding:0 0 10 0;
-    -fx-effect: dropShadow(two-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.)
+.btn_add{
+ -fx-background-color:   #e3b409;
 }
 
-.table_view .column-header, .table_view .filler{
-        -fx-size: 40;
-        -fx-border-width:  0 0 10 0;
-        -fx-background-color:transparent;
-} */
-
-
+.combo{
+-fx-background-color: transparent;
+-fx-border-color:  #a3a3a3;
+ -fx-border-width:1px;
+}
+.combo:focused{
+-fx-border-color:#e3b409;
+ -fx-border-width:1px;
+}
 .table-view .column-header,
 .table-view  .filler {
     -fx-cell-size : 20;
@@ -183,7 +177,43 @@
     -fx-fill : white ;
 
 }
+.radioClass{
+-fx-background-color:#fcfcca;
+
+}
+
+.exampane{
+-fx-background-color:#fcfcca;
+}
+.Previous{
+-fx-background-color: transparent;
+-fx-border-color:#e3b409;
+-fx-text-fill: #e3b409;
+
+}
+.Previous:hover{
+-fx-background-color:#fcfcca;
+/*-fx-text-fill: white;*/
+}
+.examPane{
+-fx-border-color: #c1c1c1;
+}
+.rules_exam{
+-fx-border-color: #e3b409;
+-fx-background-color:#fcfcca;
+}
 
 
 
 
+
+.text_area{
+
+
+-fx-border-color:  #a3a3a3;
+ -fx-background-color: transparent;
+}
+.text_area:focused{
+-fx-border-color:  #e3b409;
+ -fx-background-color: transparent;
+}

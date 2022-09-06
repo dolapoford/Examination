@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.StudentData">
+   <children>
+      <ComboBox fx:id="comboBox" layoutX="172.0" layoutY="53.0" prefWidth="150.0" />
+      <TextField fx:id="textInput" layoutX="172.0" layoutY="146.0" />
+      <Button layoutX="221.0" layoutY="222.0" mnemonicParsing="false" onAction="#getValue" text="Get Value" />
+      <Rating fx:id="rate" layoutX="183.0" layoutY="322.0" />
+   </children>
+</AnchorPane>

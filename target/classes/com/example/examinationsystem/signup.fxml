@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -9,7 +10,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="login_parent" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.Signup">
    <children>
@@ -40,7 +40,7 @@
       <TextField layoutX="61.0" layoutY="287.0" prefHeight="40.0" prefWidth="250.0" promptText="Email" styleClass="input_email" stylesheets="@Style.css" />
       <PasswordField layoutX="61.0" layoutY="339.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="input_password" />
       <PasswordField layoutX="61.0" layoutY="394.0" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" styleClass="input_password" />
-      <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="461.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" ripplerFill="#e5f812" styleClass="loginBtn" text="Signup">
+      <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="505.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" ripplerFill="#e5f812" styleClass="loginBtn" text="Signup">
          <font>
             <Font size="14.0" />
          </font>
@@ -56,5 +56,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
+      <ComboBox fx:id="comboBox" layoutX="61.0" layoutY="453.0" prefHeight="40.0" prefWidth="250.0" styleClass="combo" />
    </children>
 </AnchorPane>

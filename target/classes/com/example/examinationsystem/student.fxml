@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1134.0" styleClass="parent" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1134.0" styleClass="parent" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.HelloController">
    <left>
       <AnchorPane prefHeight="600.0" prefWidth="161.0" styleClass="sidebar" stylesheets="@Style.css" BorderPane.alignment="CENTER">
          <children>
@@ -34,7 +34,7 @@
                         <Insets left="20.0" />
                      </padding>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" onAction="#open_student" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Student">
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#open_student" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Students">
                      <graphic>
                         <FontIcon fill="#e3b409" iconLiteral="bx-user" iconSize="18" styleClass="btn_icons" />
                      </graphic>
@@ -45,7 +45,7 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Database">
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#open_data" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Database">
                      <graphic>
                         <FontIcon fill="#e3b409" iconLiteral="bx-data" iconSize="18" styleClass="btn_icons" />
                      </graphic>
@@ -56,7 +56,7 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" prefHeight="25.0" prefWidth="176.0" styleClass="btn_hover" text="Examination">
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#examBtn" prefHeight="25.0" prefWidth="176.0" styleClass="btn_hover" text="Examination">
                      <graphic>
                         <FontIcon fill="#e3b409" iconLiteral="bx-layer-plus" iconSize="18" styleClass="btn_icons" />
                      </graphic>
@@ -67,9 +67,9 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Payment">
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#open_question" prefHeight="30.0" prefWidth="176.0" styleClass="btn_hover" text="Question">
                      <graphic>
-                        <FontIcon fill="#e3b409" iconLiteral="bx-wallet-alt" iconSize="18" styleClass="btn_icons" />
+                        <FontIcon fill="#e3b409" iconLiteral="bx-file" iconSize="18" styleClass="btn_icons" />
                      </graphic>
                      <padding>
                         <Insets left="20.0" />
