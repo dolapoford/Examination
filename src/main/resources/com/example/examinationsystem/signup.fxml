@@ -36,11 +36,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <TextField layoutX="61.0" layoutY="234.0" prefHeight="40.0" prefWidth="250.0" promptText="Enter Username" styleClass="input_email" stylesheets="@Style.css" />
-      <TextField layoutX="61.0" layoutY="287.0" prefHeight="40.0" prefWidth="250.0" promptText="Email" styleClass="input_email" stylesheets="@Style.css" />
-      <PasswordField layoutX="61.0" layoutY="339.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="input_password" />
-      <PasswordField layoutX="61.0" layoutY="394.0" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" styleClass="input_password" />
-      <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="505.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" ripplerFill="#e5f812" styleClass="loginBtn" text="Signup">
+      <TextField fx:id="username" layoutX="61.0" layoutY="268.0" prefHeight="40.0" prefWidth="250.0" promptText="Enter Username" styleClass="input_email" stylesheets="@Style.css" />
+      <TextField fx:id="email" layoutX="61.0" layoutY="315.0" prefHeight="40.0" prefWidth="250.0" promptText="Email" styleClass="input_email" stylesheets="@Style.css" />
+      <PasswordField fx:id="password" layoutX="61.0" layoutY="365.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="input_password" />
+      <PasswordField fx:id="confirmPassword" layoutX="61.0" layoutY="418.0" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" styleClass="input_password" />
+      <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="519.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#signUp" prefHeight="50.0" prefWidth="300.0" ripplerFill="#e5f812" styleClass="loginBtn" text="Signup">
          <font>
             <Font size="14.0" />
          </font>
@@ -56,6 +56,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ComboBox fx:id="comboBox" layoutX="61.0" layoutY="453.0" prefHeight="40.0" prefWidth="250.0" styleClass="combo" />
+      <ComboBox fx:id="comboBox" layoutX="61.0" layoutY="467.0" prefHeight="40.0" prefWidth="250.0" styleClass="combo" />
+      <TextField fx:id="fullName" layoutX="61.0" layoutY="218.0" prefHeight="40.0" prefWidth="250.0" promptText="FullName" styleClass="input_email" stylesheets="@Style.css" />
    </children>
 </AnchorPane>

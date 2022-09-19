@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="login_parent" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.HelloController">
    <children>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="first_side">
@@ -50,14 +49,14 @@
                   <Font name="Ebrima Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="39.0" layoutY="237.0" prefHeight="40.0" prefWidth="250.0" promptText="Email" styleClass="input_email" stylesheets="@Style.css" />
-            <PasswordField layoutX="39.0" layoutY="300.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="input_password" />
+            <TextField fx:id="loginEmail" layoutX="39.0" layoutY="237.0" prefHeight="40.0" prefWidth="250.0" promptText="Email" styleClass="input_email" stylesheets="@Style.css" />
+            <PasswordField fx:id="loginPassword" layoutX="39.0" layoutY="300.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="input_password" />
             <Label layoutX="181.0" layoutY="354.0" styleClass="forget_btn" text="Forget Password?" textFill="#a3a3a3">
                <font>
                   <Font name="Ebrima Bold" size="14.0" />
                </font>
             </Label>
-            <JFXButton buttonType="RAISED" layoutX="39.0" layoutY="408.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" ripplerFill="#e5f812" styleClass="loginBtn" text="Login">
+            <JFXButton buttonType="RAISED" layoutX="39.0" layoutY="408.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#login" prefHeight="50.0" prefWidth="300.0" ripplerFill="#e5f812" styleClass="loginBtn" text="Login">
                <font>
                   <Font size="14.0" />
                </font>

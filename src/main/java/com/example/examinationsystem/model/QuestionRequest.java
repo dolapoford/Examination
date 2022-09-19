@@ -1,57 +1,60 @@
 package com.example.examinationsystem.model;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
-public class Question implements Serializable {
-    private int questionId;
-    private int examId;
-    private int questionNo;
+public class QuestionRequest implements Serializable {
+    private Integer questionId;
+    private Integer examId;
+    private Integer questionNo;
     private String question;
     private String optionA;
     private String optionB;
     private String optionC;
     private String optionD;
     private String correctAnswer;
-    private int mark;
 
-
-    public Question(int questionId, int examId, int questionNo, String question, String optionA, String optionB, String optionC, String optionD, String correctAnswer, int mark) {
-        this.questionId = questionId;
-        this.examId = examId;
-        this.questionNo = questionNo;
-        this.question = question;
-        this.optionA = optionA;
-        this.optionB = optionB;
-        this.optionC = optionC;
-        this.optionD = optionD;
-        this.correctAnswer = correctAnswer;
-        this.mark = mark;
+    public LocalDateTime getDateCreated() {
+        return dateCreated;
     }
 
-    public Question() {
+    public void setDateCreated(LocalDateTime dateCreated) {
+        this.dateCreated = dateCreated;
     }
 
-    public int getExamId() {
-        return examId;
+    public LocalDateTime getLastModified() {
+        return lastModified;
     }
 
-    public void setExamId(int examId) {
-        this.examId = examId;
+    public void setLastModified(LocalDateTime lastModified) {
+        this.lastModified = lastModified;
     }
 
-    public int getQuestionId() {
+    private Integer mark;
+    private LocalDateTime dateCreated;
+    private LocalDateTime lastModified;
+
+    public Integer getQuestionId() {
         return questionId;
     }
 
-    public void setQuestionId(int questionId) {
+    public void setQuestionId(Integer questionId) {
         this.questionId = questionId;
     }
 
-    public int getQuestionNo() {
+    public Integer getExamId() {
+        return examId;
+    }
+
+    public void setExamId(Integer examId) {
+        this.examId = examId;
+    }
+
+    public Integer getQuestionNo() {
         return questionNo;
     }
 
-    public void setQuestionNo(int questionNo) {
+    public void setQuestionNo(Integer questionNo) {
         this.questionNo = questionNo;
     }
 
@@ -103,11 +106,11 @@ public class Question implements Serializable {
         this.correctAnswer = correctAnswer;
     }
 
-    public int getMark() {
+    public Integer getMark() {
         return mark;
     }
 
-    public void setMark(int mark) {
+    public void setMark(Integer mark) {
         this.mark = mark;
     }
 }
