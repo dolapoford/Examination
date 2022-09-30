@@ -15,6 +15,18 @@ public class StudentRequest implements Serializable {
     private String status;
     private ArrayList<String> course;
 
+//    public StudentRequest(Integer id, String fullName, String email, String username, String password, LocalDateTime dateCreated, LocalDateTime lastModified, String status, ArrayList<String> course) {
+//        this.id = id;
+//        this.fullName = fullName;
+//        this.email = email;
+//        this.username = username;
+//        this.password = password;
+//        this.dateCreated = dateCreated;
+//        this.lastModified = lastModified;
+//        this.status = status;
+//        this.course = course;
+//    }
+
     public Integer getId() {
         return id;
     }

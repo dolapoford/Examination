@@ -2,21 +2,20 @@ package com.example.examinationsystem;
 
 import com.example.examinationsystem.model.SignupRequest;
 import com.example.examinationsystem.model.StudentRequest;
+import com.example.examinationsystem.store.Database;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -68,7 +67,7 @@ public class Signup implements Initializable {
         alert.setContentText(message);
         alert.show();
     }
-private Student validateForm(){
+private void validateForm(){
       String uName = username.getText();
       String pword = password.getText();
       String confirmp = confirmPassword.getText();
@@ -103,16 +102,35 @@ private Student validateForm(){
           StudentRequest payload =new StudentRequest();
           payload.setEmail(em);
           payload.setPassword(pword);
-          payload.setFullName(uName);
           payload.setFullName(fName);
-
-
+          payload.setUsername(uName);
+          ArrayList<String> courseList = new ArrayList<>();
+          courseList.add(comboBox.getSelectionModel().getSelectedItem());
+          payload.setCourse(courseList);
+          Database.saveStudent(payload);
+          clearText();
+          showAlert(Alert.AlertType.INFORMATION, "Success",
+                  "Student Created successfully");
       }
 
 
+
 }
+private void clearText(){
+        username.clear();
+        fullName.clear();
+        password.clear();
+        confirmPassword.clear();
+        email.clear();
+        comboBox.getSelectionModel().select(0);
+}
+
     @FXML
     void signUp(ActionEvent event) {
+validateForm();
+        System.out.println("***".repeat(20));
+        System.out.println(Database.listStudent().size());
+
 
 
     }
