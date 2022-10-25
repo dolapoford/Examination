@@ -1,5 +1,6 @@
 package com.example.examinationsystem;
 
+
 import com.example.examinationsystem.model.StudentRequest;
 import com.example.examinationsystem.store.Database;
 import javafx.collections.FXCollections;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class Student implements Initializable {
+public class Students implements Initializable{
     @FXML
     private TableView<StudentRequest> studentTable;
     @FXML
@@ -38,16 +39,14 @@ public class Student implements Initializable {
     @FXML
     private TableColumn<StudentRequest, Integer> idColumn;
     ObservableList<StudentRequest> studentRequestsObeservableList;
+    private ObservableList<StudentRequest> tvObservableList = FXCollections.observableArrayList();
     private List<StudentRequest> studentList;
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        fullnameColumn = new TableColumn<StudentRequest, String>();
-        courseColumn =new TableColumn<StudentRequest, String>();
-        emailColumn=new TableColumn<StudentRequest, String>();
-        
+
         studentRequestsObeservableList=FXCollections.observableArrayList();
         data = new Database();
         studentList=new ArrayList<>();
@@ -64,6 +63,7 @@ public class Student implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addStudentDialog.fxml"));
         Parent parent = fxmlLoader.load();
         Subject dialogController = fxmlLoader.<Subject>getController();
+        dialogController.setAppMainObservableList(tvObservableList);
         Scene scene = new Scene(parent, 640, 450);
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -76,22 +76,14 @@ public class Student implements Initializable {
 
 
 
-//
-//        fullnameColumn.setCellValueFactory(new Callback<CellDataFeatures<Person, String>, ObservableValue<String>>() {
-//            public ObservableValue<String> call(CellDataFeatures<Person, String> p) {
-//                // p.getValue() returns the Person instance for a particular TableView row
-//                return p.getValue().firstNameProperty();
-//            }
-//        });
-//    }
-        courseColumn.setCellValueFactory(new PropertyValueFactory<StudentRequest,String>("course"));
-        emailColumn.setCellValueFactory(new PropertyValueFactory<StudentRequest,String>("email"));
-        fullnameColumn.setCellValueFactory(new PropertyValueFactory<StudentRequest,String>("fullName"));
-        idColumn.setCellValueFactory(new PropertyValueFactory<StudentRequest,Integer>("id"));
-        studentTable.setItems(studentRequestsObeservableList);
-//        studentTable.getColumns().addAll(courseColumn,emailColumn,fullnameColumn,idColumn);
-    }
 
+        courseColumn.setCellValueFactory(new PropertyValueFactory<>("course"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
+        fullnameColumn.setCellValueFactory(new PropertyValueFactory<>("fullName"));
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        studentTable.setItems(studentRequestsObeservableList);
+
+    }
 
 
 }

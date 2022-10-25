@@ -3,6 +3,7 @@ package com.example.examinationsystem.model;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 public class StudentRequest implements Serializable {
     private Integer id;
@@ -13,7 +14,7 @@ public class StudentRequest implements Serializable {
     private LocalDateTime dateCreated;
     private LocalDateTime lastModified;
     private String status;
-    private ArrayList<String> course;
+    private List<String> course;
 
 //    public StudentRequest(Integer id, String fullName, String email, String username, String password, LocalDateTime dateCreated, LocalDateTime lastModified, String status, ArrayList<String> course) {
 //        this.id = id;
@@ -91,11 +92,11 @@ public class StudentRequest implements Serializable {
         this.status = status;
     }
 
-    public ArrayList<String> getCourse() {
+    public List<String> getCourse() {
         return course;
     }
 
-    public void setCourse(ArrayList<String> course) {
+    public void setCourse(List<String> course) {
         this.course = course;
     }
 }

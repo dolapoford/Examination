@@ -1,19 +1,19 @@
 package com.example.examinationsystem.store;
 
 import com.example.examinationsystem.model.CourseRequest;
+import com.example.examinationsystem.model.ExamRequest;
 import com.example.examinationsystem.model.QuestionRequest;
 import com.example.examinationsystem.model.StudentRequest;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class Database {
     private final static HashMap<Integer, StudentRequest> studentHashMap= new HashMap<>();
     private final static HashMap<Integer , QuestionRequest> questionHashMap= new HashMap<>();
     private final static  HashMap<Integer, CourseRequest> courseHashMap= new HashMap<>();
+    private final static HashMap<Integer, ExamRequest> examHashMap= new HashMap<>();
+
     public static void saveStudent(StudentRequest payload){
         if(payload.getId() !=null && studentHashMap.containsKey(payload.getId())){
             studentHashMap.put(payload.getId(), payload);
@@ -92,10 +92,15 @@ public class Database {
         }
 
     }
+    public static List<CourseRequest> listCourse(){
+        List<CourseRequest> ls =new ArrayList<>();
+        ls.addAll(courseHashMap.values());
+        return ls;
+    }
 
     public static String removeCourse(Integer courseId){
-        if(studentHashMap.containsKey(courseId)){
-            studentHashMap.remove(courseId);
+        if(courseHashMap.containsKey(courseId)){
+            courseHashMap.remove(courseId);
             return "Course removed successfully";
         }
         else
@@ -103,6 +108,30 @@ public class Database {
     }
 
 
+    // Exam
 
+    public static void saveExam(ExamRequest payload){
+        if(payload.getExamId() !=null && examHashMap.containsKey(payload.getExamId())){
+            examHashMap.put(payload.getExamId(), payload);
+        }else{
+            Integer examId = examHashMap.size()+1;
+            payload.setExamId(examId);
+            payload.setDateCreated(LocalDateTime.now());
+            examHashMap.put(examId, payload);
+        }
+    }
+
+
+    public static List<ExamRequest> listExam(){
+        List<ExamRequest> ls =new ArrayList<>();
+        ls.addAll(examHashMap.values());
+        return ls;
+    }
     
 }
+
+
+
+
+
+

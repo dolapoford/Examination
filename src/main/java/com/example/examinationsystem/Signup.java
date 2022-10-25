@@ -127,7 +127,7 @@ private void clearText(){
 
     @FXML
     void signUp(ActionEvent event) {
-validateForm();
+        validateForm();
         System.out.println("***".repeat(20));
         System.out.println(Database.listStudent().size());
 

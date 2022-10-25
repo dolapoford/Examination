@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
@@ -12,9 +13,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<DialogPane fx:id="addStudentDialog" expanded="true" prefHeight="376.0" prefWidth="640.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.Subject">
+<DialogPane fx:id="addStudentDialog" expanded="true" prefHeight="376.0" prefWidth="640.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.Score">
     <content>
-        <AnchorPane prefHeight="310.0" prefWidth="640.0">
+        <AnchorPane prefHeight="335.0" prefWidth="640.0">
             <children>
                 <GridPane layoutY="50.0" prefHeight="246.0" prefWidth="620.0" AnchorPane.topAnchor="30.0">
                     <columnConstraints>
@@ -61,23 +62,23 @@
                                 <Insets left="20.0" />
                             </padding>
                         </Label>
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="qnsPerExam" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="courseName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="courseCode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <ComboBox prefHeight="40.0" prefWidth="250.0" styleClass="combo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="129.0" text="#" textFill="#a3a3a3">
                      <font>
                         <Font name="Ebrima Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" />
+                  <TextField fx:id="subjectId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" styleClass="input_email" stylesheets="@Style.css" GridPane.columnIndex="1" />
                     </children>
                 </GridPane>
+            <Button fx:id="addSubject" layoutX="170.0" layoutY="291.0" mnemonicParsing="false" onAction="#addSubject" prefHeight="33.0" prefWidth="320.0" styleClass="btn_add" text="ADD" textFill="WHITE" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             </children>
         </AnchorPane>
     </content>
-    <buttonTypes>
-        <ButtonType fx:constant="OK" />
-        <ButtonType fx:constant="CLOSE" />
-    </buttonTypes>
 </DialogPane>

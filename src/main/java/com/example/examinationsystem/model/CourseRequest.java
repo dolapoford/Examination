@@ -5,8 +5,9 @@ import java.time.LocalDateTime;
 
 public class CourseRequest implements Serializable {
     private Integer courseId;
-    private Integer courseCode;
+    private String courseCode;
     private String courseName;
+    private String qnsPerExam ;
 
     private LocalDateTime dateCreated;
     private LocalDateTime lastModified;
@@ -35,11 +36,11 @@ public class CourseRequest implements Serializable {
         this.courseId = courseId;
     }
 
-    public Integer getCourseCode() {
+    public String getCourseCode() {
         return courseCode;
     }
 
-    public void setCourseCode(Integer courseCode) {
+    public void setCourseCode(String courseCode) {
         this.courseCode = courseCode;
     }
 
@@ -59,6 +60,6 @@ public class CourseRequest implements Serializable {
         this.qnsPerExam = qnsPerExam;
     }
 
-    private String qnsPerExam;
+
 
 }

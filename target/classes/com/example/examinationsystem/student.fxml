@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1134.0" styleClass="parent" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.HelloController">
+<BorderPane fx:id="bor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1134.0" styleClass="parent" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examinationsystem.HelloController">
    <left>
       <AnchorPane prefHeight="600.0" prefWidth="161.0" styleClass="sidebar" stylesheets="@Style.css" BorderPane.alignment="CENTER">
          <children>
@@ -125,7 +125,7 @@
                         <Insets bottom="15.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="176.0" styleClass="btn_icon2" text="Log Out" textFill="#c1c1c1">
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#log_out" prefHeight="30.0" prefWidth="176.0" styleClass="btn_icon2" text="Log Out" textFill="#c1c1c1">
                      <graphic>
                         <FontIcon fill="#0a0a0a" iconLiteral="bx-log-out" iconSize="18" />
                      </graphic>

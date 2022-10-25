@@ -49,18 +49,18 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <TableView prefHeight="547.0" prefWidth="800.0" styleClass="table_view">
+                  <TableView fx:id="courseTable" prefHeight="547.0" prefWidth="800.0" styleClass="table_view">
                      <columns>
                         <TableColumn prefWidth="98.0">
                            <graphic>
                               <JFXCheckBox prefHeight="18.0" prefWidth="14.0" text="." textFill="#e3b409" unCheckedColor="WHITE" />
                            </graphic>
                         </TableColumn>
-                        <TableColumn prefWidth="106.0" text="#" />
-                        <TableColumn prefWidth="149.0" text="Course Code" />
-                        <TableColumn minWidth="0.0" prefWidth="176.0" text="Course Name" />
-                        <TableColumn prefWidth="124.0" text="Qns Per Exam" />
-                        <TableColumn prefWidth="144.0" text="Action" />
+                        <TableColumn fx:id="subjectId" prefWidth="106.0" text="#" />
+                        <TableColumn fx:id="courseCode" prefWidth="149.0" text="Course Code" />
+                        <TableColumn fx:id="courseName" minWidth="0.0" prefWidth="176.0" text="Course Name" />
+                        <TableColumn fx:id="qnsPerExam" prefWidth="124.0" text="Qns Per Exam" />
+                        <TableColumn fx:id="action" prefWidth="144.0" text="Action" />
                      </columns>
                   </TableView>
                </children>

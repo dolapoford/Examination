@@ -2,15 +2,20 @@ package com.example.examinationsystem;
 
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -18,7 +23,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    private double xOffset = 0;
+    private double yOffset = 0;
 
+    @FXML
+    private BorderPane bor_pane;
     @FXML
     private Pane content_area;
     @FXML
@@ -32,6 +44,7 @@ public class HelloController implements Initializable {
     @FXML
     private PasswordField loginPassword;
 
+     
     @FXML
     void open_signup(MouseEvent event) throws IOException {
         Parent fxml = FXMLLoader.load(getClass().getResource("signup.fxml"));
@@ -100,27 +113,41 @@ System.exit(0);
 
 
     @FXML
-    void login(ActionEvent event) {
+    void login(ActionEvent event) throws IOException {
         String username = loginEmail.getText().toString();
         String password = loginPassword.getText().toString();
-        if(loginEmail.getText().isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, "Form Error!",
-                    "Please enter your email id");
-            return;
-        }
-        if(loginPassword.getText().isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, "Form Error!",
-                    "Please enter a password");
-            return;
-        }
+//        if(loginEmail.getText().isEmpty()) {
+//            showAlert(Alert.AlertType.ERROR, "Form Error!",
+//                    "Please enter your email id");
+//            return;
+//        }
+//        if(loginPassword.getText().isEmpty()) {
+//            showAlert(Alert.AlertType.ERROR, "Form Error!",
+//                    "Please enter a password");
+//            return;
+//        }
 
         if(adminUsername.equals(username) && adminPassword.equals(password)){
-            infoBox("Login Successful!", null, "Success");
+           Parent root = FXMLLoader.load(getClass().getResource("student.fxml"));
+           stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+           scene = new Scene(root);
+           stage.setScene(scene);
+           stage.show();
+            //infoBox("Login Successful!", null, "Success");
         } else{
             infoBox("Please enter correct Email and Password", null, "Failed");
         }
     }
 
+
+    @FXML
+    void log_out(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
 }
